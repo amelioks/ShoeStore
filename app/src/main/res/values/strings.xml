@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+
+    <string name="welcome">Welcome to Amel\'s Store</string>
+    <string name="instruction">Instruction </string>
+    <string name="button_next">Next</string>
+    <string name="shoe_list">Shoe List</string>
+    <string name="logout">Log Out</string>
+    <string name="input_detail">Input Details:</string>
+    <string name="shoe_name">Shoe Name: </string>
+    <string name="company_name">Company Name: </string>
+    <string name="shoe_size">Shoe Size: </string>
+    <string name="shoe_description">Shoe Description: </string>
+    <string name="et_enter_shoe">enter shoe name</string>
+    <string name="et_enter_company">enter shoe company</string>
+    <string name="et_enter_size">enter shoe size</string>
+    <string name="et_enter_description">enter shoe description</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_save">Save</string>
+    <string name="shoes_instruction">After this page, you will be directed to shoes listing page.
+        \n\nThe page is an inventory list for all the shoes the store has.
+        \n\nIf there is new shoes in inventory, add the shoes by click the add button.
+        \n\nAfter that, you require to input information about the shoes: shoe name, company name, shoe size, and description.
+        \n\nThen, click Save, and the new shoe will be added into the shoes listing page.
+        \n\nIf you cancel the input, the new shoe will not be added, and you will be directed back into the shoe listing page.</string>
+</resources>
