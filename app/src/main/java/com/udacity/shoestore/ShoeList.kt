@@ -5,6 +5,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 
 class ShoeList : Fragment() {
@@ -27,6 +28,14 @@ class ShoeList : Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
 
         inflater.inflate(R.menu.listmenu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.action_logout ->
+                findNavController().navigate(R.id.action_shoeList_to_login)
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 
