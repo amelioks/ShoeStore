@@ -6,25 +6,54 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
+import com.udacity.shoestore.models.ShoeViewModel
 
 
 class ShoeDetail : Fragment() {
+
+    private lateinit var binding: FragmentShoeDetailBinding
+    private val viewModel: ShoeViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: FragmentShoeDetailBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_shoe_detail, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_shoe_detail, container, false
+        )
+
+        binding.shoeViewModel = viewModel
+
+        binding.buttonSave.setOnClickListener {
+
+            if (viewModel.addNewShoe(name = binding.etextShoeName.text.toString(),
+                    size = binding.etextShoeSize.text.toString().toDoubleOrNull() ?:-1.0,
+                    company = binding.etextShoeCompany.text.toString(),
+                description = binding.etextShoeDescription.text.toString())) {
+
+                it.findNavController().navigate(R.id.action_shoeDetail_to_shoeList)
+
+            } else {
+                Snackbar.make(
+                    requireView(),
+                    getString(R.string.validate_input),
+                    Snackbar.LENGTH_LONG
+                )
+                    .show()
+            }
+
+        }
 
         binding.buttonCancel.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_shoeDetail_to_shoeList)
         )
 
         return binding.root
-
     }
-
 }
+

@@ -14,6 +14,7 @@
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
         android:layout_gravity="center"
+        android:backgroundTint="@color/lightYellow"
         android:id="@+id/loginPage">
 
         <LinearLayout
@@ -24,23 +25,17 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Amel's Store"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Login Page"
-            android:textSize="24sp" />
+            android:text="@string/login"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Email:"
+            android:text="@string/email"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -48,14 +43,14 @@
                 android:id="@+id/etext_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Your Email"
+                android:hint="@string/hint_email"
                 android:inputType="text"
                 android:textSize="14sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Password:"
+                android:text="@string/password"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -63,7 +58,7 @@
                 android:id="@+id/etext_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Your Password"
+                android:hint="@string/hint_password"
                 android:inputType="textPassword"
                 android:textSize="14sp"/>
 
@@ -77,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="60dp"
-                    android:text="Sign Up"
+                    android:text="@string/sign_up"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +82,7 @@
                     android:id="@+id/button_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Log In"
+                    android:text="@string/log_in"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/button_signup"

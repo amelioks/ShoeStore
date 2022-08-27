@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Shoe Store</string>
 
+    <string name="login">Login Page</string>
+    <string name="email">Email: </string>
+    <string name="hint_email">Enter Your Email</string>
+    <string name="password">Password: </string>
+    <string name="hint_password">Enter Your Password</string>
+    <string name="log_in">Login</string>
+    <string name="sign_up">Sign Up</string>
+
     <string name="welcome">Welcome to Amel\'s Store</string>
     <string name="instruction">Instruction </string>
     <string name="button_next">Next</string>
@@ -12,12 +20,13 @@
     <string name="company_name">Company Name: </string>
     <string name="shoe_size">Shoe Size: </string>
     <string name="shoe_description">Shoe Description: </string>
-    <string name="et_enter_shoe">enter shoe name</string>
-    <string name="et_enter_company">enter shoe company</string>
-    <string name="et_enter_size">enter shoe size</string>
-    <string name="et_enter_description">enter shoe description</string>
+    <string name="hint_shoe_name">enter shoe name</string>
+    <string name="hint_company">enter shoe company</string>
+    <string name="hint_size">enter shoe size</string>
+    <string name="hint_description">enter shoe description</string>
     <string name="button_cancel">Cancel</string>
     <string name="button_save">Save</string>
+    <string name="validate_input">Please input all the information</string>
     <string name="shoes_instruction">After this page, you will be directed to shoes listing page.
         \n\nThe page is an inventory list for all the shoes the store has.
         \n\nIf there is new shoes in inventory, add the shoes by click the add button.

@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.shoe_item.view.*
 class ShoeList : Fragment() {
 
 
-    val viewModel: ShoeViewModel by activityViewModels()
+    private val viewModel: ShoeViewModel by activityViewModels()
     private lateinit var binding: FragmentShoeListBinding
 
     override fun onCreateView(
@@ -27,8 +27,9 @@ class ShoeList : Fragment() {
 
         viewModel.shoeList.observe(viewLifecycleOwner) {
             binding.shoeList.removeAllViews()
-            for (shoe in it) {
-                addingShoe(shoe.name)
+            for (shoe_item in it) {
+                addingShoe(shoe_item.name)
+                addingShoe(shoe_item.size.toString())
             }}
 
         binding.buttonAddShoe.setOnClickListener(

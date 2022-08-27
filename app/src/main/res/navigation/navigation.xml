@@ -51,7 +51,7 @@
     <fragment
         android:id="@+id/shoeDetail"
         android:name="com.udacity.shoestore.ShoeDetail"
-        android:label="fragment_shoe_detail"
+        android:label="Amel Shoe Inventory"
         tools:layout="@layout/fragment_shoe_detail" >
         <action
             android:id="@+id/action_shoeDetail_to_shoeList"
