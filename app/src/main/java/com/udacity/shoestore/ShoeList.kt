@@ -5,7 +5,6 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
-import com.udacity.shoestore.databinding.FragmentLoginBinding
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 
 class ShoeList : Fragment() {
@@ -20,7 +19,7 @@ class ShoeList : Fragment() {
         binding.buttonAddShoe.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_shoeList_to_shoeDetail))
 
-
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -29,5 +28,7 @@ class ShoeList : Fragment() {
 
         inflater.inflate(R.menu.listmenu, menu)
     }
+
+
 
 }

@@ -4,6 +4,7 @@
     <string name="welcome">Welcome to Amel\'s Store</string>
     <string name="instruction">Instruction </string>
     <string name="button_next">Next</string>
+    <string name="text_proceed">Click Next to Proceed</string>
     <string name="shoe_list">Shoe List</string>
     <string name="logout">Log Out</string>
     <string name="input_detail">Input Details:</string>
