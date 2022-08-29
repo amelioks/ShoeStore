@@ -11,34 +11,32 @@ import com.udacity.shoestore.MainActivity
 import com.udacity.shoestore.R
 
 class ShoeViewModel : ViewModel() {
-    private val _shoeList = MutableLiveData<MutableList<Shoe>>()
-    val shoeList: LiveData<MutableList<Shoe>>
-        get() = _shoeList
+    val shoeList = MutableLiveData<MutableList<Shoe>>()
 
-    private val _shoeName = MutableLiveData<String>()
-    val shoeName: LiveData<String>
-        get() = _shoeName
+    val shoeName = MutableLiveData<String>()
 
-    private val _shoeSize = MutableLiveData<String>()
-    val shoeSize: LiveData<String>
-        get() = _shoeSize
+    val shoeSize = MutableLiveData<String>()
 
-    private val _shoeCompany = MutableLiveData<String>()
-    val shoeCompany: LiveData<String>
-        get() = _shoeCompany
+    val shoeCompany = MutableLiveData<String>()
 
-    private val _shoeDescription = MutableLiveData<String>()
-    val shoeDescription: LiveData<String>
-        get() = _shoeDescription
+    val shoeDescription = MutableLiveData<String>()
+
 
     init {
-        _shoeList.value = mutableListOf()
+        shoeList.value = mutableListOf()
     }
 
     private fun addShoe() {
         val shoe = Shoe(shoeName.value?:"", shoeSize.value?.toDouble()?: -1.0,
             shoeCompany.value?:"", shoeDescription.value?:"")
-        _shoeList.value!!.add(shoe)
+        shoeList.value!!.add(shoe)
+    }
+
+    fun resetInput() {
+        shoeName.value = ""
+        shoeSize.value = ""
+        shoeCompany.value = ""
+        shoeDescription.value = ""
     }
 
     fun addNewShoe(): Boolean {

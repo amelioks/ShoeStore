@@ -35,7 +35,7 @@ class ShoeDetail : Fragment() {
             if (viewModel.addNewShoe()) {
 
                 it.findNavController().navigate(R.id.action_shoeDetail_to_shoeList)
-
+                viewModel.resetInput()
             } else {
                 Snackbar.make(
                     requireView(),
