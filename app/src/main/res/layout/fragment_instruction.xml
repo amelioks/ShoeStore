@@ -3,6 +3,8 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- This page use Constraint Layout to be able dynamically position each word onscreen
+    in relation to other word.-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"

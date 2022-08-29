@@ -17,6 +17,7 @@
         android:backgroundTint="@color/lightYellow"
         android:id="@+id/loginPage">
 
+        <!-- This page part use Linear Layout to align all the text vertically-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,6 +62,9 @@
                 android:hint="@string/hint_password"
                 android:inputType="textPassword"
                 android:textSize="14sp"/>
+
+            <!-- This page part use Constraint Layout to bring more flexible
+            view for the buttons and in relation to each other-->
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

@@ -4,10 +4,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     >
 
+    <!-- This page part use Linear Layout to align all the text-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- This page use ScrollView to be to adjusts
+        what portion of the underlying content is visible.-->
         <ScrollView
             android:id="@+id/shoeListView"
             android:layout_width="match_parent"
@@ -23,7 +26,6 @@
                 android:layout_marginTop="24dp"
                 android:orientation="vertical"
                 android:padding="32dp">
-
 
             </LinearLayout>
         </ScrollView>

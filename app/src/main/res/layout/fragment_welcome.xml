@@ -2,6 +2,8 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- This page use Constraint Layout to be able dynamically position each word onscreen
+    in relation to other word.-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"

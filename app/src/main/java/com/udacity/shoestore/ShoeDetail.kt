@@ -28,13 +28,11 @@ class ShoeDetail : Fragment() {
         )
 
         binding.shoeViewModel = viewModel
+        binding.lifecycleOwner = this
 
         binding.buttonSave.setOnClickListener {
 
-            if (viewModel.addNewShoe(name = binding.etextShoeName.text.toString(),
-                    size = binding.etextShoeSize.text.toString().toDoubleOrNull() ?:-1.0,
-                    company = binding.etextShoeCompany.text.toString(),
-                description = binding.etextShoeDescription.text.toString())) {
+            if (viewModel.addNewShoe()) {
 
                 it.findNavController().navigate(R.id.action_shoeDetail_to_shoeList)
 
